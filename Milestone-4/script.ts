@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resumeSkills = document.getElementById('resume-skills') as HTMLDivElement;
   
     // Default values
-    const defaultName = 'Ahmed Rza';
+    const defaultName = 'Ahmed Raza';
     const defaultEmail = 'Ahmed@example.com';
     const defaultEducation = 'Bachelor of Science in Computer Science';
     const defaultWorkExperience = 'Freelance developer 1+ years';
