@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var resumeWork = document.getElementById('resume-work');
     var resumeSkills = document.getElementById('resume-skills');
     // Default values
-    var defaultName = 'Ahmed Raza';
+    var defaultName = 'Ahmed Raa';
     var defaultEmail = 'Ahmed@example.com';
     var defaultEducation = 'Bachelor of Science in Computer Science';
     var defaultWorkExperience = 'Freelance developer 1+ years';
