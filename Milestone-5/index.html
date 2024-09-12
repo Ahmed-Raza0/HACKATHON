@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add jsPDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Builder</h1>
+
+    <form id="resume-form">
+      <h2>Personal Information</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required><br>
+      
+      <h2>Education</h2>
+      <label for="degree">Degree:</label>
+      <input type="text" id="degree" placeholder="Enter your degree" required><br>
+      
+      <label for="school">School/University:</label>
+      <input type="text" id="school" placeholder="Enter your school or university" required><br>
+      
+      <label for="grad-year">Graduation Year:</label>
+      <input type="number" id="grad-year" placeholder="Enter your graduation year" required><br>
+      
+      <h2>Work Experience</h2>
+      <label for="work-experience">Work Experience:</label>
+      <textarea id="work-experience" placeholder="Enter your work experience" required></textarea><br>
+      
+      <h2>Skills</h2>
+      <label for="skills">Skills:</label>
+      <textarea id="skills" placeholder="Enter your skills" required></textarea><br>
+
+      <button type="button" id="generate-resume">Generate Resume</button>
+      <button type="button" id="share-resume">Share Resume</button>
+      <button type="button" id="download-pdf">Download PDF</button>
+    </form>
+
+    <div id="resume" style="display:none;">
+      <h2>Your Resume</h2>
+      <div>
+        <h3>Personal Information</h3>
+        <p><strong>Name:</strong> <span id="resume-name"></span></p>
+        <p><strong>Email:</strong> <span id="resume-email"></span></p>
+
+        <h3>Education</h3>
+        <p><strong>Degree:</strong> <span id="resume-degree"></span></p>
+        <p><strong>School:</strong> <span id="resume-school"></span></p>
+        <p><strong>Graduation Year:</strong> <span id="resume-grad-year"></span></p>
+
+        <h3>Work Experience</h3>
+        <p id="resume-work-experience"></p>
+
+        <h3>Skills</h3>
+        <p id="resume-skills"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
