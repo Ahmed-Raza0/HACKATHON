@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const resumeSkills = document.getElementById('resume-skills') as HTMLDivElement;
   
     // Default values
-    const defaultName = 'John Doe';
-    const defaultEmail = 'john.doe@example.com';
+    const defaultName = 'Ahmed RAza';
+    const defaultEmail = 'Ahmed@example.com';
     const defaultEducation = 'Bachelor of Science in Computer Science';
-    const defaultWorkExperience = 'Software Engineer at XYZ Corp';
-    const defaultSkills = 'JavaScript, TypeScript, HTML, CSS';
+    const defaultWorkExperience = 'Freelance developer 1+ years';
+    const defaultSkills = 'HTML, CSS,TAILWIND, JAVASCRIPT, TYPESCRIPT, REACT, NEXT.JS';
   
     // Function to initialize resume with default values
     const initializeResume = () => {
