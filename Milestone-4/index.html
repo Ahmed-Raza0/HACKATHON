@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editable Resume</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Editable Resume</h1>
+
+    <!-- Form to generate the resume -->
+    <form id="resume-form">
+      <h2>Personal Information</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <h2>Education</h2>
+      <label for="education">Education:</label>
+      <input type="text" id="education" required>
+
+      <h2>Work Experience</h2>
+      <label for="work-experience">Work Experience:</label>
+      <textarea id="work-experience" rows="3" required></textarea>
+
+      <h2>Skills</h2>
+      <label for="skills">Skills:</label>
+      <input type="text" id="skills" required>
+
+      <button type="submit">Edit Resume</button>
+    </form>
+
+    <!-- Generated resume section -->
+    <div id="resume-output">
+      <h2>Your Resume</h2>
+      <div class="editable" contenteditable="true" id="resume-name">Name: </div>
+      <div class="editable" contenteditable="true" id="resume-email">Email: </div>
+      <div class="editable" contenteditable="true" id="resume-education">Education: </div>
+      <div class="editable" contenteditable="true" id="resume-work">Work Experience: </div>
+      <div class="editable" contenteditable="true" id="resume-skills">Skills: </div>
+    </div>
+  </div>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
