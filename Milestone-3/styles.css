@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 20px;
     color: #333;
+    
 }
 
 .container {
@@ -42,7 +43,7 @@ label {
 }
 
 input, textarea {
-    width: 100%;
+    width: 850px;
     padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -118,5 +119,6 @@ button:hover {
 
     input, textarea {
         font-size: 1em;
+        max-width: 90%;
     }
 }
