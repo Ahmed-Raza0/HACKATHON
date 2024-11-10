@@ -1,4 +1,3 @@
-// script.ts
 document.addEventListener('DOMContentLoaded', function () {
     // Get the form and resume output elements
     var form = document.getElementById('resume-form');
@@ -7,12 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var resumeEducation = document.getElementById('resume-education');
     var resumeWork = document.getElementById('resume-work');
     var resumeSkills = document.getElementById('resume-skills');
-    // Default values
+    var resumeOutput = document.getElementById('resume-output');
+    // Default values (optional for initial state)
     var defaultName = 'Ahmed Raza';
     var defaultEmail = 'Ahmed@example.com';
     var defaultEducation = 'Bachelor of Science in Computer Science';
     var defaultWorkExperience = 'Freelance developer 1+ years';
-    var defaultSkills = 'HTML, CSS,TAILWIND, JAVASCRIPT, TYPESCRIPT, REACT, NEXT.JS';
+    var defaultSkills = 'HTML, CSS, TAILWIND, JAVASCRIPT, TYPESCRIPT, REACT, NEXT.JS';
     // Function to initialize resume with default values
     var initializeResume = function () {
         resumeName.textContent = "Name: ".concat(defaultName);
@@ -26,18 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('work-experience').value = defaultWorkExperience;
         document.getElementById('skills').value = defaultSkills;
     };
-    // Update resume with form values
+    // Function to update resume with form values
     var updateResume = function () {
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
         var education = document.getElementById('education').value;
         var workExperience = document.getElementById('work-experience').value;
-        var skills = document.getElementById('skills').value;
+        var skillsInput = document.getElementById("skills");
+        // Set the text of the resume sections with the input values
         resumeName.textContent = "Name: ".concat(name);
         resumeEmail.textContent = "Email: ".concat(email);
         resumeEducation.textContent = "Education: ".concat(education);
         resumeWork.textContent = "Work Experience: ".concat(workExperience);
-        resumeSkills.textContent = "Skills: ".concat(skills);
+        skills: skillsInput.value.split(",").map(function (skill) { return skill.trim(); });
+        // Show the generated resume section
+        resumeOutput.style.display = 'block';
     };
     // Handle form submission
     form.addEventListener('submit', function (event) {
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     // Initialize resume with default values
     initializeResume();
-    // Attach editable functionality
+    // Attach editable functionality to resume fields
     makeEditable(resumeName);
     makeEditable(resumeEmail);
     makeEditable(resumeEducation);

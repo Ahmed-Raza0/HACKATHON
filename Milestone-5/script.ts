@@ -77,10 +77,8 @@ window.onload = () => {
         nameInput.value = name;
         emailInput.value = email;
 
-        // Here, you would ideally fetch the resume data based on the name and email from your backend
-        // For demonstration, just showing a message
+         
         alert(`Loaded resume for ${name} (${email})`);
         
-        // For a real application, make an API call here to fetch the full resume details and populate the resume section
-    }
+             }
 };
