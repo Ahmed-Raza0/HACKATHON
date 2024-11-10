@@ -182,3 +182,11 @@ button:hover {
     padding: 10px;
   }
 }
+
+@media (max-width: 1000px) {
+  input, textarea {
+      font-size: 1em;
+      max-width: 90%;
+  }
+}
+

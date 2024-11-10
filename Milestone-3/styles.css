@@ -122,3 +122,9 @@ button:hover {
         max-width: 90%;
     }
 }
+@media (max-width: 1000px) {
+    input, textarea {
+        font-size: 1em;
+        max-width: 90%;
+    }
+}
